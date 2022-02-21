@@ -1,0 +1,21 @@
+.logo {
+    align-items: center;
+    display: flex;
+    & > span {
+        color: $c-white;
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-left: .25rem;
+    }
+    & > img {
+        height: 1.7rem;
+        width: 1.7rem;
+    }
+
+}
+
+//This is for header fixed
+.header__fixed > .logo > span {
+    color: $c-black;
+}

@@ -3,7 +3,14 @@
 @import "./global/mixins.scss";
 @import "./global/global.scss";
 
-@import "./lyout/footer.scss";
+//Lyout
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+@import "./layout/logo.scss";
+
+//Navigation and menu
+@import "./navigation/navigationIcon.scss";
+@import "./navigation/responsiveMenu.scss";
 
 //Specials
 @import "./specials/buttons.scss";

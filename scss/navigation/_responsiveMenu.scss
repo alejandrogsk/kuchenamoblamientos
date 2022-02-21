@@ -1,0 +1,71 @@
+/*Navigation*/
+.responsive__menu {
+    
+    & > ul {
+        display: flex;
+        list-style:none;
+
+        & > li {
+            margin-left: 1rem;
+            
+            & > a {
+                text-decoration: none;
+                color: $c-white;
+                text-transform: capitalize;
+                font-weight: 500;
+                transition: 200ms color;
+
+                &:hover {
+                    color:$c-primary;
+                }
+            }
+        }
+    }
+
+    &.show__menu { transform: translateX(0rem); }
+
+    @include respond(tab) {
+        & {
+            background-color: $c-white;
+            
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 25rem;
+            z-index: 1;
+            border-left: 1px $c-primary solid;
+            transform: translateX(30rem);
+            transition: $t-medium ease-in-out;
+            
+            & > ul {
+                list-style: none; 
+                margin: 5rem auto auto;
+                flex-direction: column;
+                padding: 1rem;
+        
+                & > li { 
+                    margin-top: 1rem;
+                    text-transform: uppercase;
+        
+                    & > a{
+                        font-size: 1.2rem;
+                        text-decoration: none;
+                        color: $c-black;
+                        text-transform: capitalize;
+                        font-weight: 500;
+                    }
+                }
+        
+            }
+
+        }
+    }
+}
+
+//This is for header fixed
+.header__fixed > .responsive__menu > ul > li > a {
+    color: $c-black;
+
+    &:hover { color: $c-primary }
+}

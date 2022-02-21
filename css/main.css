@@ -10,6 +10,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h2 {
@@ -61,6 +62,28 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #fc871a;
 }
 
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.header__fixed {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 50em) {
+  .header__fixed {
+    position: absolute;
+  }
+}
+
 footer {
   padding: 2rem;
 }
@@ -77,14 +100,17 @@ footer {
     row-gap: 1rem;
   }
 }
-.contact__data > div:first-child > svg {
+.contact__data > div:first-child > a {
+  display: inline-block;
+}
+.contact__data > div:first-child > a > svg {
   height: 5rem;
   width: 2rem;
   cursor: pointer;
   fill: #000;
   transition: 300ms all;
 }
-.contact__data > div:first-child > svg:hover {
+.contact__data > div:first-child > a > svg:hover {
   fill: #ff7a00;
 }
 .contact__data > div > span:last-child {
@@ -106,6 +132,129 @@ footer {
 .copyright {
   text-align: center;
   margin-top: 2rem;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+}
+.logo > span {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 0.25rem;
+}
+.logo > img {
+  height: 1.7rem;
+  width: 1.7rem;
+}
+
+.header__fixed > .logo > span {
+  color: #000;
+}
+
+.nav__icon {
+  cursor: pointer;
+  height: 1rem;
+  margin: 1rem;
+  position: fixed;
+  right: 1rem;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  top: 1rem;
+  width: 3.5rem;
+  z-index: 2;
+  display: none;
+}
+@media (max-width: 50em) {
+  .nav__icon {
+    display: block;
+  }
+}
+.nav__icon > span {
+  background-color: #FF7A00;
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 3.5rem;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.nav__icon > span:first-child {
+  top: 0rem;
+}
+.nav__icon > span:last-child {
+  top: 0.75rem;
+}
+.nav__icon.menu__open > span:first-child {
+  top: 6px;
+  transform: rotate(145deg);
+}
+.nav__icon.menu__open > span:last-child {
+  top: 6px;
+  transform: rotate(-145deg);
+}
+
+/*Navigation*/
+.responsive__menu > ul {
+  display: flex;
+  list-style: none;
+}
+.responsive__menu > ul > li {
+  margin-left: 1rem;
+}
+.responsive__menu > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: 200ms color;
+}
+.responsive__menu > ul > li > a:hover {
+  color: #ff7a00;
+}
+.responsive__menu.show__menu {
+  transform: translateX(0rem);
+}
+@media (max-width: 50em) {
+  .responsive__menu {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 25rem;
+    z-index: 1;
+    border-left: 1px #ff7a00 solid;
+    transform: translateX(30rem);
+    transition: 300ms ease-in-out;
+  }
+  .responsive__menu > ul {
+    list-style: none;
+    margin: 5rem auto auto;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .responsive__menu > ul > li {
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+  .responsive__menu > ul > li > a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+}
+
+.header__fixed > .responsive__menu > ul > li > a {
+  color: #000;
+}
+.header__fixed > .responsive__menu > ul > li > a:hover {
+  color: #ff7a00;
 }
 
 .btn-1 {
@@ -171,7 +320,7 @@ footer {
   margin: 1rem 0;
 }
 
-transition .section1 {
+.section1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/image1.jpg");
   background-size: cover;
   background-position: center;
@@ -181,51 +330,51 @@ transition .section1 {
   align-items: center;
   display: grid;
 }
-transition .section1 > div {
+.section1 > div {
   margin-left: 5rem;
   max-width: 40%;
 }
-transition .section1 > div > h1 {
+.section1 > div > h1 {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
   font-weight: 700;
 }
-transition .section1 > div > h1 > span {
+.section1 > div > h1 > span {
   color: #ff7a00;
   font-size: inherit;
 }
-transition .section1 > div > p {
+.section1 > div > p {
   font-size: 1.5rem;
   font-weight: 500;
 }
 @media (max-width: 65.62em) {
-  transition .section1 > div {
+  .section1 > div {
     margin-left: 2rem;
     max-width: 60%;
   }
 }
 @media (max-width: 50em) {
-  transition .section1 > div {
+  .section1 > div {
     margin-left: 1rem;
     max-width: 80%;
   }
-  transition .section1 > div > h1 {
+  .section1 > div > h1 {
     font-size: 2.25rem;
   }
-  transition .section1 > div > p {
+  .section1 > div > p {
     font-size: 1.25rem;
   }
 }
 @media (max-width: 37.5em) {
-  transition .section1 > div {
+  .section1 > div {
     margin: 1rem;
     max-width: 100%;
   }
-  transition .section1 > div > h1 {
+  .section1 > div > h1 {
     font-size: 2rem;
   }
-  transition .section1 > div > p {
+  .section1 > div > p {
     font-size: 1rem;
   }
 }
@@ -463,6 +612,7 @@ transition .section1 > div > p {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  margin: 1rem;
   padding: 2rem;
   width: 30rem;
 }

@@ -13,15 +13,18 @@ footer {
         row-gap: 1rem;
     }
 
-    & > div:first-child > svg {
-        height: 5rem;
-        width: 2rem;
-        cursor: pointer;
-        fill: $c-black;
+    & > div:first-child > a {
+        display: inline-block;
 
-        transition: $t-medium all;
-        &:hover {
-            fill: $c-primary;
+        & > svg {
+            height: 5rem;
+            width: 2rem;
+            cursor: pointer;
+            fill: $c-black;
+            transition: $t-medium all;
+            &:hover {
+                fill: $c-primary;
+            }
         }
     }
 
