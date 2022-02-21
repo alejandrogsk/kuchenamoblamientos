@@ -1,0 +1,50 @@
+footer {
+    padding: 2rem;
+}
+
+.contact__data {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    @include respond(tab) {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    & > div:first-child > svg {
+        height: 5rem;
+        width: 2rem;
+        cursor: pointer;
+        fill: $c-black;
+
+        transition: $t-medium all;
+        &:hover {
+            fill: $c-primary;
+        }
+    }
+
+    & > div > span:last-child {
+        text-decoration: underline;
+        cursor: pointer;
+        transition: $t-medium all;
+    }
+
+    & > div > a {
+        color: $c-black;
+        transition: $t-medium all;
+        &:hover {
+            color: $c-primary;
+        }
+    }
+
+    & > div > span:last-child:hover {
+        color: $c-primary;
+    }
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+}

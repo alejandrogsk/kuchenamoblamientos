@@ -1,0 +1,13 @@
+//Global styles
+@import "./global/variables.scss";
+@import "./global/mixins.scss";
+@import "./global/global.scss";
+
+@import "./lyout/footer.scss";
+
+//Specials
+@import "./specials/buttons.scss";
+@import "./specials/lines.scss";
+
+//Pages
+@import "./pages/home.scss";

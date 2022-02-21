@@ -1,0 +1,430 @@
+transition
+
+.section1 {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("../../assets/images/image1.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    color: $c-white;
+    align-items: center;
+    display: grid;
+
+    & > div {
+        margin-left: 5rem;
+        max-width: 40%;
+
+        & > h1 {
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+
+            & > span {
+                color: $c-primary;
+                font-size: inherit;
+            }
+        }
+
+        & > p {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+
+    @include respond(desktop-small) {
+        & > div {
+            margin-left: 2rem;
+            max-width: 60%;
+        }
+    }
+
+    @include respond(tab) {
+        & > div {
+            margin-left: 1rem;
+            max-width: 80%;
+
+            & > h1 {
+                font-size: 2.25rem;
+            }
+            & > p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    @include respond(phone-tab) {
+        & > div {
+            margin: 1rem;
+            max-width: 100%;
+
+            & > h1 {
+                font-size: 2rem;
+            }
+            & > p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.section2 {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4rem;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > div:last-child {
+            margin-top: 2rem;
+
+            & > .about__services {
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                align-items: start;
+                row-gap: 1rem;
+                column-gap: 0.5rem;
+
+                & > img {
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            height: 80vh;
+            max-height: 1000px;
+            width: auto;
+        }
+    }
+
+    @include respond(tab) {
+        grid-template-columns: 1fr;
+        margin: 1.5rem;
+        gap: 2rem;
+
+        &__right > img {
+            //This maybe is not necessary
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    @include respond(phone-tab) {
+        grid-template-columns: 1fr;
+        margin: 1rem;
+    }
+}
+
+.section3 {
+    min-height: 40vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("../../assets/images/image1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: $c-white;
+    padding: 3rem;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond(tab) {
+        padding: 1.5rem;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+    }
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > span {
+            font-weight: 600;
+            font-size: 2rem;
+            letter-spacing: 0.08rem;
+        }
+    }
+}
+
+.section4 {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        align-items: center;
+        column-gap: 0.5rem;
+
+        & > h3 {
+            font-weight: 500;
+        }
+        & > img {
+            height: 30px;
+            width: 30px;
+        }
+        & > p {
+            grid-column: 2/3;
+        }
+    }
+
+    @include respond(tab) {
+        margin: 1.5rem;
+
+        &__items {
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+        }
+    }
+
+    @include respond(phone-tab) {
+        margin: 1rem;
+    }
+}
+
+.section5 {
+    min-height: 40vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("../../assets/images/image2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: $c-white;
+    padding: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section6 {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4rem;
+
+    @include respond(tab) {
+        grid-template-columns: 1fr;
+        margin: 1.5rem;
+        row-gap: 2rem;
+    }
+
+    @include respond(phone-tab) {
+        margin: 1rem;
+        row-gap: 1.5rem;
+    }
+
+    &__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            height: 80vh;
+            max-height: 1000px;
+            width: auto;
+
+            @include respond(tab) {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+
+    &__right {
+        .plans__list {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+            margin-top: 2rem;
+
+            @include respond(desktop-small) {
+                margin-top: 1rem;
+            }
+
+            &--item {
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                column-gap: 0.5rem;
+                row-gap: 0.75rem;
+
+                & > h3 {
+                    font-weight: 500;
+                }
+                & > p {
+                    grid-column: 2/3;
+                }
+
+                &-symbol {
+                    font-weight: 500;
+                    font-size: 1.7rem;
+                    @include respond(tab) {
+                        font-size: 1.6rem;
+                    }
+                    @include respond(phone-tab) {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                &-point {
+                    color: $c-primary;
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+}
+
+.section7 {
+    align-items: center;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("../../assets/images/image1.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+    //form
+    &__contact {
+        background-color: $c-white;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        width: 30rem;
+
+        @include respond(phone-tab) {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 1rem;
+            width: 25rem;
+        }
+
+        & > h6 {
+            font-size: 1.5rem;
+            @include respond(tab) {
+                font-size: 1.3rem;
+            }
+            @include respond(phone-tab) {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    &__form {
+        & > div > input {
+            outline: 0;
+            border-width: 0 0 1px;
+            border-color: $c-secondary;
+            font-size: 1rem;
+        }
+
+        &--par {
+            &-horizontal {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+
+                @include respond(tab) {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+
+                    & > input:first-child {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                & > input {
+                    width: 48%;
+                    @include respond(tab) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-vertical {
+                display: flex;
+                flex-direction: column;
+
+                & > input {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        &--plans {
+            &-options {
+                display: flex;
+
+                & > div {
+                    margin-right: 0.5rem;
+                    display: inline-block;
+                }
+            }
+        }
+
+        &--message {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+
+            & > textarea {
+                height: 5rem;
+                width: 100%;
+                resize: none;
+                outline: 0;
+                border-color: $c-secondary;
+                font-size: .9rem;
+                margin-top: .5rem;
+            }
+        }
+    }
+}
+

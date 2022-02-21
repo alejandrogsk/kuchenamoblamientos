@@ -1,0 +1,11 @@
+1. facebook link
+2. instagram link
+3. phone call works?
+4. maps works
+5. make email works
+6. implements captcha
+7. make whatsapp works
+
+//aditional
+8. google analitycs 
+9. facebook pixel
