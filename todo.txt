@@ -10,3 +10,6 @@
 //aditional
 9. google analitycs 
 10. facebook pixel
+
+11. minificar css
+12. minificar js
