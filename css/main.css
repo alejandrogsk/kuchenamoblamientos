@@ -198,26 +198,6 @@ footer {
 }
 
 /*Navigation*/
-.responsive__menu > ul {
-  display: flex;
-  list-style: none;
-}
-.responsive__menu > ul > li {
-  margin-left: 1rem;
-}
-.responsive__menu > ul > li > a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: capitalize;
-  font-weight: 500;
-  transition: 200ms color;
-}
-.responsive__menu > ul > li > a:hover {
-  color: #ff7a00;
-}
-.responsive__menu.show__menu {
-  transform: translateX(0rem);
-}
 @media (max-width: 50em) {
   .responsive__menu {
     background-color: #fff;
@@ -231,16 +211,51 @@ footer {
     transform: translateX(30rem);
     transition: 300ms ease-in-out;
   }
+}
+@media (max-width: 37.5em) {
+  .responsive__menu {
+    width: 22rem;
+  }
+}
+@media (max-width: 25em) {
+  .responsive__menu {
+    width: 20rem;
+  }
+}
+@media (max-width: 20em) {
+  .responsive__menu {
+    width: 18rem;
+  }
+}
+.responsive__menu > ul {
+  display: flex;
+  list-style: none;
+}
+@media (max-width: 50em) {
   .responsive__menu > ul {
     list-style: none;
     margin: 5rem auto auto;
     flex-direction: column;
     padding: 1rem;
   }
+}
+.responsive__menu > ul > li {
+  margin-left: 1rem;
+}
+@media (max-width: 50em) {
   .responsive__menu > ul > li {
     margin-top: 1rem;
     text-transform: uppercase;
   }
+}
+.responsive__menu > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: 200ms color;
+}
+@media (max-width: 50em) {
   .responsive__menu > ul > li > a {
     font-size: 1.2rem;
     text-decoration: none;
@@ -248,6 +263,12 @@ footer {
     text-transform: capitalize;
     font-weight: 500;
   }
+}
+.responsive__menu > ul > li > a:hover {
+  color: #ff7a00;
+}
+.responsive__menu.show__menu {
+  transform: translateX(0rem);
 }
 
 .header__fixed > .responsive__menu > ul > li > a {
