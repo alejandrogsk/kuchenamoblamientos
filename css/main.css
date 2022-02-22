@@ -321,7 +321,7 @@ footer {
 }
 
 .section1 {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/image1.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/image1.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -433,7 +433,7 @@ footer {
 
 .section3 {
   min-height: 40vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/image1.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/image1.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -511,7 +511,7 @@ footer {
 
 .section5 {
   min-height: 40vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/image2.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/image2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -601,7 +601,7 @@ footer {
 
 .section7 {
   align-items: center;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/image1.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/image1.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
