@@ -2,7 +2,7 @@
 2. instagram link 
 3. make the navigation works - DONE
 4. phone call works?
-5. maps works 
+5. maps works - DONE
 6. make email works
 7. implements captcha
 8. make whatsapp works
