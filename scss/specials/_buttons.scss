@@ -1,9 +1,11 @@
 .btn-1 {
+    text-decoration: none;
     background-color: $c-white;
     border: none;
     color: $c-black;
     padding: 1rem 2rem;
     cursor: pointer;
+
 
     font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
@@ -45,7 +47,7 @@
     letter-spacing: 0.05rem;
     transition: all $t-medium;
     margin-top: 1rem;
-
+    text-decoration: none;
     &:hover {
         background-color: $c-primary-light;
     }
