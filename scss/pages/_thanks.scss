@@ -23,6 +23,9 @@
 
         & > h1 {
             font-size: 2rem;
+            @include respond(phone-tab) {
+                font-size: 1.5rem;
+            }
         }
 
         & > p {
@@ -38,6 +41,11 @@
         display: flex;
         justify-content: space-between;
 
+        @include respond(phone-tab) {
+            flex-direction: column;
+            align-items: start;
+        }
+a {text-align: center;}
         &-social{
             & > a {
                 display: inline-block;
